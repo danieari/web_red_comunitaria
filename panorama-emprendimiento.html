@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama de Emprendimiento en Colombia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+        header {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            transform: scale(1.05);
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        section p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table th, table td {
+            padding: 1rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #3498db;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        table tr:hover {
+            background-color: #ecf0f1;
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+        }
+        /* Responsividad */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Panorama de Emprendimiento en Colombia</h1>
+        <p>Conoce las tendencias y los desafíos del ecosistema emprendedor en Colombia</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="enlaces-recomendados.html">Enlaces Recomendados</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="tasa-emprendimientos.html">Tasa de Emprendimientos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>El Auge del Emprendimiento en Colombia: Oportunidades y Desafíos</h2>
+            <p>El panorama de emprendimiento en Colombia ha mostrado una evolución significativa en los últimos años, destacándose especialmente en sectores como la tecnología, los servicios y los productos sostenibles. La innovación y el dinamismo del mercado colombiano han impulsado un auge en la creación de nuevas empresas, con un notable aumento de startups que están marcando tendencia en diversas regiones del país.
+
+                Sin embargo, el camino hacia el crecimiento empresarial no ha estado exento de retos. A pesar de la gran creatividad e iniciativa de los emprendedores, factores como la falta de acceso a financiación, las barreras burocráticas y la fuerte competencia internacional han sido obstáculos persistentes. Además, el contexto económico global, sumado a las complejidades internas del país, ha puesto a prueba la resiliencia de los empresarios colombianos.
+                
+                A pesar de estos desafíos, el panorama sigue siendo prometedor, ya que las políticas gubernamentales y las iniciativas privadas están enfocadas en fortalecer el ecosistema emprendedor. Programas de apoyo, alianzas estratégicas y un creciente interés por la innovación están contribuyendo a que Colombia se posicione como un referente regional en términos de emprendimiento y desarrollo de nuevos negocios.</p>
+        </section>
+        
+        <section>
+            <h2>Datos históricos sobre el emprendimiento en Colombia</h2>
+            <p>A continuación se presentan los datos históricos sobre la tasa de emprendimiento en diversas regiones del país:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Año</th>
+                        <th>Región</th>
+                        <th>Porcentaje de Emprendimientos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020</td>
+                        <td>Bogotá</td>
+                        <td>28%</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Medellín</td>
+                        <td>26%</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Cali</td>
+                        <td>23%</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Barranquilla</td>
+                        <td>30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Red Comunitaria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

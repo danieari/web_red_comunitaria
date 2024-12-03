@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Emprendimiento e Innovación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        main h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input, form select, form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        form button {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #27ae60;
+        }
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta sobre Emprendimiento e Innovación</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="emprendimientos.html">Enlaces Recomendados</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="tasa-emprendimientos.html">Tasa de Emprendimientos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <main>
+        <h2>Participa en nuestra encuesta y contribuye al análisis de emprendimientos</h2>
+        <form id="surveyForm">
+            <label for="probabilidad">¿Qué tan probable es que inicies un emprendimiento en los próximos 12 meses?</label>
+            <input type="radio" name="probabilidad" value="Alta" required> Alta<br>
+            <input type="radio" name="probabilidad" value="Media" required> Media<br>
+            <input type="radio" name="probabilidad" value="Baja" required> Baja<br><br>
+            
+            <label for="interes">¿Cuál es tu principal área de interés?</label>
+            <select name="interes" required>
+                <option value="tecnologia">Tecnología</option>
+                <option value="moda">Moda</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="servicios">Servicios</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+    
+            <label for="apoyo">¿Qué tipo de apoyo consideras más importante para iniciar tu emprendimiento?</label>
+            <select name="apoyo" required>
+                <option value="financiero">Financiero</option>
+                <option value="educativo">Educativo</option>
+                <option value="mentoria">Mentoría</option>
+                <option value="red-de-contactos">Red de contactos</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+    
+            <label for="innovacion">¿Te consideras una persona innovadora?</label>
+            <input type="radio" name="innovacion" value="Sí" required> Sí<br>
+            <input type="radio" name="innovacion" value="No" required> No<br><br>
+
+            <label for="ideas">Describe brevemente una idea de emprendimiento que te gustaría realizar:</label>
+            <textarea name="ideas" rows="4" required></textarea><br><br>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Red Comunitaria. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("surveyForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            const probabilidad = document.querySelector('input[name="probabilidad"]:checked');
+            if (!probabilidad) {
+                alert("Por favor, selecciona una opción de probabilidad.");
+                return;
+            }
+
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            console.log(JSON.stringify(data)); // Enviar a un servidor o procesar
+            alert("¡Gracias por participar en la encuesta! Tus respuestas han sido registradas.");
+        });
+    </script>
+</body>
+</html>

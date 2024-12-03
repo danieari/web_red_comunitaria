@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Comunitaria - Enlaces Recomendados</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+        header {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .enlace {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 1rem 0;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .enlace:hover {
+            transform: translateY(-10px);
+        }
+        .enlace h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        .enlace p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+        .enlace a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .enlace a:hover {
+            background-color: #1abc9c;
+        }
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Mejora para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .enlace {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .enlace {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enlaces Recomendados</h1>
+        <p>Recursos para Emprendedores en Colombia</p>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="enlaces-recomendados.html">Enlaces Recomendados</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="tasa-emprendimientos.html">Tasa de Emprendimientos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="main-content">
+        <div class="enlace">
+            <h3>Confecámaras</h3>
+            <p>Red de Cámaras de Comercio que apoya a los emprendedores con trámites y servicios.</p>
+            <a href="https://www.confecamaras.org.co/" target="_blank" rel="noopener noreferrer">Acceder a servicios</a>
+        </div>
+        <div class="enlace">
+            <h3>Innpulsa Colombia</h3>
+            <p>Entidad que fomenta la innovación y el emprendimiento en Colombia con programas y recursos.</p>
+            <a href="https://www.innpulsacolombia.com/" target="_blank" rel="noopener noreferrer">Ver oportunidades</a>
+        </div>
+        <div class="enlace">
+            <h3>Ruta N</h3>
+            <p>Centro de innovación y emprendimiento de la ciudad de Medellín que ofrece recursos a los emprendedores.</p>
+            <a href="https://www.rutanmedellin.org/" target="_blank" rel="noopener noreferrer">Visitar Ruta N</a>
+        </div>
+        <div class="enlace">
+            <h3>ProColombia</h3>
+            <p>Entidad encargada de promover el comercio, la inversión y el turismo en Colombia.</p>
+            <a href="https://www.procolombia.co/" target="_blank" rel="noopener noreferrer">Conocer más</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Red Comunitaria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

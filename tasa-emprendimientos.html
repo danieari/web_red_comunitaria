@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasa de Emprendimientos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+        header {
+            background-color: #2ecc71; 
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db; 
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+        }
+        nav a:hover {
+            background-color: #1abc9c; 
+        }
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #fff;  /* Título Red Comunitaria en blanco */
+            text-align: center;
+        }
+        .section-title {
+            color: #000; /* Título Tasa de Emprendimientos en negro */
+            background-color: #fff; /* Fondo blanco */
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #3498db; 
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2ecc71; 
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Red Comunitaria</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="enlaces-recomendados.html">Enlaces Recomendados</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="tasa-emprendimientos.html">Tasa de Emprendimientos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <main>
+        <div class="section-title">
+            Tasa de Emprendimientos en Colombia
+        </div>
+        <p>En esta sección se presenta información relevante sobre las tasas de emprendimiento en varias ciudades de Colombia.</p>
+        
+        <!-- Filtro de Año -->
+        <label for="yearFilter">Filtrar por Año:</label>
+        <select id="yearFilter">
+            <option value="">Todos los años</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Año</th>
+                    <th>Ciudad</th>
+                    <th>Porcentaje de Emprendimientos</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+                <!-- Los datos se insertarán aquí dinámicamente -->
+                <tr>
+                    <td>2020</td>
+                    <td>Bogotá</td>
+                    <td>22%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Medellín</td>
+                    <td>25%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Cali</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Barranquilla</td>
+                    <td>24%</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Bogotá</td>
+                    <td>24%</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Medellín</td>
+                    <td>26%</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Cali</td>
+                    <td>22%</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Barranquilla</td>
+                    <td>28%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Bogotá</td>
+                    <td>26%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Medellín</td>
+                    <td>28%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Cali</td>
+                    <td>23%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Barranquilla</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Bogotá</td>
+                    <td>29%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Medellín</td>
+                    <td>31%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Cali</td>
+                    <td>27%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Barranquilla</td>
+                    <td>32%</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Red Comunitaria. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const data = [
+            { year: 2020, city: "Bogotá", ventures: "22%" },
+            { year: 2020, city: "Medellín", ventures: "25%" },
+            { year: 2020, city: "Cali", ventures: "20%" },
+            { year: 2020, city: "Barranquilla", ventures: "24%" },
+            { year: 2021, city: "Bogotá", ventures: "24%" },
+            { year: 2021, city: "Medellín", ventures: "26%" },
+            { year: 2021, city: "Cali", ventures: "22%" },
+            { year: 2021, city: "Barranquilla", ventures: "28%" },
+            { year: 2022, city: "Bogotá", ventures: "26%" },
+            { year: 2022, city: "Medellín", ventures: "28%" },
+            { year: 2022, city: "Cali", ventures: "23%" },
+            { year: 2022, city: "Barranquilla", ventures: "30%" },
+            { year: 2023, city: "Bogotá", ventures: "29%" },
+            { year: 2023, city: "Medellín", ventures: "31%" },
+            { year: 2023, city: "Cali", ventures: "27%" },
+            { year: 2023, city: "Barranquilla", ventures: "32%" },
+        ];
+
+        const yearFilter = document.getElementById("yearFilter");
+        const dataTable = document.getElementById("dataTable");
+
+        function updateTable() {
+            const selectedYear = yearFilter.value;
+            const filteredData = data.filter(item => 
+                item.year == selectedYear || selectedYear == ""
+            );
+            
+            // Limpiar las filas existentes
+            dataTable.innerHTML = "";
+
+            // Llenar la tabla con los datos filtrados
+            filteredData.forEach(item => {
+                const row = dataTable.insertRow();
+                row.insertCell(0).innerText = item.year;
+                row.insertCell(1).innerText = item.city;
+                row.insertCell(2).innerText = item.ventures;
+            });
+        }
+
+        // Escuchar el cambio en el filtro de año
+        yearFilter.addEventListener("change", updateTable);
+
+        // Inicializar la tabla al cargar la página
+        updateTable();
+    </script>
+</body>
+</html>

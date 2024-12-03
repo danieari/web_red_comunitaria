@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Comunitaria - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+        header {
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 1rem 0;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+        .card button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .card button:hover {
+            background-color: #1abc9c;
+        }
+        .data-dashboard {
+            margin-top: 2rem;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .data-dashboard h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #3498db;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Red Comunitaria</h1>
+        <p>Impulsa el emprendimiento y la innovación en Colombia</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="enlaces-recomendados.html">Enlaces Recomendados</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="tasa-emprendimientos.html">Tasa de Emprendimientos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <div class="main-content">
+        <div class="card">
+            <h2>Emprendimiento en Colombia</h2>
+            <p>Conoce el panorama actual de los emprendimientos en Colombia y cómo puedes ser parte del cambio.</p>
+            <button onclick="window.location.href='panorama-emprendimiento.html'">Ver Panorama</button>
+        </div>
+        
+        <div class="card">
+            <h2>Encuesta de Innovación</h2>
+            <p>Evalúa tu capacidad emprendedora y descubre qué tan innovador eres.</p>
+            <button onclick="window.location.href='encuesta.html'">Participar en la encuesta</button>
+        </div>
+        
+        <div class="card">
+            <h2>Noticias de Emprendimiento</h2>
+            <p>Entérate de las últimas noticias y tendencias del mundo del emprendimiento y la innovación.</p>
+            <button onclick="window.location.href='noticias.html'">Ver noticias</button>
+        </div>
+    </div>
+    
+    <div class="data-dashboard">
+        <h2>Datos Históricos de Emprendimiento</h2>
+        <p>Consulta los datos más relevantes sobre emprendimiento e innovación en Colombia.</p>
+        
+        <!-- Gráfico de barras -->
+        <canvas id="myChart" width="400" height="200"></canvas>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Año</th>
+                        <th>Tipo de Actividad</th>
+                        <th>Porcentaje de Emprendimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>Tecnología</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Comercio</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Servicios</td>
+                        <td>22%</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>Industria</td>
+                        <td>18%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p>Estos datos son actualizados anualmente, brindando una visión general sobre las actividades más relevantes dentro del ecosistema emprendedor de Colombia.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Red Comunitaria. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Inclusión de Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',  // Tipo de gráfico (barra)
+            data: {
+                labels: ['2023', '2022', '2021', '2020'],  // Etiquetas de los años
+                datasets: [{
+                    label: 'Porcentaje de Emprendimiento',
+                    data: [30, 25, 22, 18],  // Porcentajes de emprendimiento
+                    backgroundColor: ['#3498db', '#2ecc71', '#f39c12', '#e74c3c'],  // Colores de las barras
+                    borderColor: ['#2980b9', '#27ae60', '#f39c12', '#c0392b'],  // Colores del borde de las barras
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true  // Asegura que el gráfico comience en 0
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
